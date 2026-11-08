@@ -121,18 +121,51 @@
 
   /* Badge */
   .badge-new {
+    position: absolute;
+    top: 45px;
+    left: 12px;
     background: #ff4444;
     color: #fff;
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 700;
-    padding: 2px 8px;
-    border-radius: 10px;
-    margin-left: 8px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    z-index: 2;
     animation: pulse 2s infinite;
+    box-shadow: 0 2px 8px rgba(255,68,68,0.6);
   }
   @keyframes pulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.5; }
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.7; transform: scale(1.05); }
+  }
+
+  /* Shimmer effect for featured card */
+  .link-card-featured {
+    position: relative;
+    overflow: hidden;
+  }
+  .link-card-featured::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(255,215,0,0.15) 40%,
+      rgba(255,255,255,0.25) 50%,
+      rgba(255,215,0,0.15) 60%,
+      transparent 100%
+    );
+    animation: shimmer 3s ease-in-out infinite;
+    z-index: 1;
+    pointer-events: none;
+  }
+  @keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
   }
 
   /* Footer */
@@ -150,7 +183,7 @@
   <img src="hero.png" alt="パチンカスマン" class="hero-img">
 </div>
 <div class="profile">
-  <div class="bio">店の都合より、お前らの財布を守る。<br>新台の落とし穴を暴く情報発信者💪🔥</div>
+  <div class="bio">まだ丸腰で打ってんの？それ養分って言うんだよ😂<br>無駄負けしたくないパチンカス諸君よく来たな！<br>ここが噂の…<br>パチ屋に嫌われる側の溜まり場や！<br>ゆっくりしていってな～😊</div>
 </div>
 
 <div class="links">
@@ -166,7 +199,8 @@
   </a>
 
   <!-- PACHI HALL -->
-  <a href="https://pachi.onlinepachi-japan.com/?ref=V9U55H" target="_blank" class="link-card">
+  <a href="https://pachi.onlinepachi-japan.com/?ref=V9U55H" target="_blank" class="link-card link-card-featured">
+    <span class="badge-new">🔥NEW</span>
     <img src="card-pachihall.png" alt="PACHI HALL" class="card-banner">
   </a>
 
