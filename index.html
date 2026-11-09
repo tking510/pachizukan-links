@@ -31,10 +31,7 @@
     overflow: hidden;
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   }
-  .hero-img {
-    width: 100%;
-    display: block;
-  }
+  .hero-img { width: 100%; display: block; }
 
   /* Bio */
   .profile {
@@ -48,13 +45,47 @@
     line-height: 1.6;
   }
 
-  /* Link Cards with Banner Images */
-  .links {
+  /* Genre Sections */
+  .genre-section {
     width: 100%;
     max-width: 400px;
+    margin-bottom: 28px;
+  }
+  .genre-header {
     display: flex;
-    flex-direction: column;
-    gap: 14px;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+    padding: 0 4px;
+  }
+  .genre-header .genre-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(255,215,0,0.6), transparent);
+  }
+  .genre-header .genre-line-right {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,215,0,0.6));
+  }
+  .genre-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFD700;
+    white-space: nowrap;
+    letter-spacing: 1px;
+  }
+
+  /* Link Items */
+  .link-item {
+    margin-bottom: 14px;
+  }
+  .link-desc {
+    font-size: 13px;
+    font-weight: 600;
+    color: #e6e6e6;
+    padding: 0 4px 6px;
+    line-height: 1.4;
   }
   .link-card {
     display: block;
@@ -70,95 +101,21 @@
     transform: translateY(-3px);
     box-shadow: 0 8px 32px rgba(0,0,0,0.5);
   }
-  .link-card:active {
-    transform: translateY(0);
-  }
-
-  /* Card with banner image */
+  .link-card:active { transform: translateY(0); }
   .link-card .card-banner {
     width: 100%;
     display: block;
     height: auto;
   }
 
-  /* Card without banner (fallback) */
-  .link-card-text {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 18px 20px;
-    border-radius: 16px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-    transition: transform 0.15s, box-shadow 0.15s;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  }
-  .link-card-text:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.5);
-  }
-  .link-card-text .icon {
-    font-size: 28px;
-    flex-shrink: 0;
-  }
-  .link-card-text .info {
-    display: flex;
-    flex-direction: column;
-  }
-  .link-card-text .subtitle {
-    font-size: 12px;
-    font-weight: 400;
-    opacity: 0.8;
-    margin-top: 2px;
-  }
-  .pachi-db {
-    background: linear-gradient(135deg, #FFD700 0%, #b8960f 100%);
-    color: #1a1a2e;
-  }
-  .pachi-db .subtitle { color: #333; }
-
-  /* Badge */
-  .badge-new {
-    position: absolute;
-    top: 45px;
-    left: 12px;
-    background: #ff4444;
-    color: #fff;
-    font-size: 13px;
-    font-weight: 700;
-    padding: 4px 12px;
-    border-radius: 12px;
-    z-index: 2;
-    animation: pulse 2s infinite;
-    box-shadow: 0 2px 8px rgba(255,68,68,0.6);
-  }
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.05); }
-  }
-
   /* Shimmer effect for featured card */
-  .link-card-featured {
-    position: relative;
-    overflow: hidden;
-  }
+  .link-card-featured { position: relative; overflow: hidden; }
   .link-card-featured::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: -100%;
-    width: 60%;
-    height: 100%;
-    background: linear-gradient(
-      90deg,
-      transparent 0%,
-      rgba(255,215,0,0.15) 40%,
-      rgba(255,255,255,0.25) 50%,
-      rgba(255,215,0,0.15) 60%,
-      transparent 100%
-    );
+    top: 0; left: -100%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent 0%, rgba(255,215,0,0.15) 40%, rgba(255,255,255,0.25) 50%, rgba(255,215,0,0.15) 60%, transparent 100%);
     animation: shimmer 3s ease-in-out infinite;
     z-index: 1;
     pointer-events: none;
@@ -186,44 +143,96 @@
   <div class="bio">まだ丸腰で打ってんの？それ養分って言うんだよ😂<br>無駄負けしたくないパチンカス諸君よく来たな！<br>ここが噂の…<br>パチ屋に嫌われる側の溜まり場や！<br>ゆっくりしていってな～😊</div>
 </div>
 
-<div class="links">
+<!-- ジャンル1：情報＆動画 -->
+<div class="genre-section">
+  <div class="genre-header">
+    <span class="genre-line-right"></span>
+    <span class="genre-title">📊 情報＆動画</span>
+    <span class="genre-line"></span>
+  </div>
 
-  <!-- PACHI HALL -->
-  <a href="https://pachi.onlinepachi-japan.com/?ref=V9U55H" target="_blank" class="link-card link-card-featured">
-    <span class="badge-new">🔥NEW</span>
-    <img src="card-pachihall.png" alt="PACHI HALL" class="card-banner">
-  </a>
+  <div class="link-item">
+    <div class="link-desc">📖 9000機種以上のスペックまとめサイト</div>
+    <a href="https://onlinepachi-japan.com/" target="_blank" class="link-card">
+      <img src="card-db.png" alt="パチ図鑑データベース" class="card-banner">
+    </a>
+  </div>
 
-  <!-- レジェスロch. 24時間LIVE配信 -->
-  <a href="https://www.youtube.com/@legeslo2" target="_blank" class="link-card">
-    <img src="card-legeslo-live.png" alt="レジェスロch. 24時間LIVE配信" class="card-banner">
-  </a>
+  <div class="link-item">
+    <div class="link-desc">🎬 高設定台の傾向動画でチェック</div>
+    <a href="https://www.youtube.com/@legeslo" target="_blank" class="link-card">
+      <img src="card-legeslo.png" alt="レジェスロch." class="card-banner">
+    </a>
+  </div>
+</div>
 
-  <!-- レジェスロch. YouTube本垢 -->
-  <a href="https://www.youtube.com/@legeslo" target="_blank" class="link-card">
-    <img src="card-legeslo.png" alt="レジェスロch." class="card-banner">
-  </a>
+<!-- ジャンル2：実践＆ライブ配信 -->
+<div class="genre-section">
+  <div class="genre-header">
+    <span class="genre-line-right"></span>
+    <span class="genre-title">🔴 実践＆ライブ配信</span>
+    <span class="genre-line"></span>
+  </div>
 
-  <!-- パチ図鑑 無料ch -->
-  <a href="https://t.me/pachizukan_free" target="_blank" class="link-card">
-    <img src="card-pachizukan.png" alt="パチ図鑑 無料ch" class="card-banner">
-  </a>
+  <div class="link-item">
+    <div class="link-desc">📺 ライブ配信はココ！今日は○設定？！</div>
+    <a href="https://www.youtube.com/@legeslo2" target="_blank" class="link-card">
+      <img src="card-legeslo-live.png" alt="レジェスロch. 24時間LIVE配信" class="card-banner">
+    </a>
+  </div>
 
-  <!-- パチコミュ -->
-  <a href="https://t.me/+E6M53NYtP9FiMzE9" target="_blank" class="link-card">
-    <img src="card-pachicomu.png" alt="パチコミュ" class="card-banner">
-  </a>
+  <div class="link-item">
+    <div class="link-desc">🎰 実践！秘密のコード【V9U55H】で2倍遊べる！</div>
+    <a href="https://pachi.onlinepachi-japan.com/?ref=V9U55H" target="_blank" class="link-card link-card-featured">
+      <img src="card-pachihall.png" alt="PACHI HALL" class="card-banner">
+    </a>
+  </div>
+</div>
 
-  <!-- パチ図鑑データベース -->
-  <a href="https://onlinepachi-japan.com/" target="_blank" class="link-card">
-    <img src="card-db.png" alt="パチ図鑑データベース" class="card-banner">
-  </a>
+<!-- ジャンル3：㊕情報＆パチンカスコミュニティ -->
+<div class="genre-section">
+  <div class="genre-header">
+    <span class="genre-line-right"></span>
+    <span class="genre-title">㊕ 情報＆パチンカスコミュニティ</span>
+    <span class="genre-line"></span>
+  </div>
 
-  <!-- パチンコ情報局 X -->
-  <a href="https://x.com/Pachikokb" target="_blank" class="link-card">
-    <img src="card-x.png" alt="パチンコ情報局" class="card-banner">
-  </a>
+  <div class="link-item">
+    <div class="link-desc">🛡️ 毎日情報ゲットで財布を守れ！</div>
+    <a href="https://t.me/pachizukan_free" target="_blank" class="link-card">
+      <img src="card-pachizukan.png" alt="パチ図鑑 無料ch" class="card-banner">
+    </a>
+  </div>
 
+  <div class="link-item">
+    <div class="link-desc">👊 パチンカス仲間と情報交換して楽しもう！</div>
+    <a href="https://t.me/+E6M53NYtP9FiMzE9" target="_blank" class="link-card">
+      <img src="card-pachicomu.png" alt="パチコミュ" class="card-banner">
+    </a>
+  </div>
+</div>
+
+<!-- ジャンル4：SNSも見逃すな！ -->
+<div class="genre-section">
+  <div class="genre-header">
+    <span class="genre-line-right"></span>
+    <span class="genre-title">📱 SNSも見逃すな！</span>
+    <span class="genre-line"></span>
+  </div>
+
+  <div class="link-item">
+    <div class="link-desc">🐦 Ｘでチェック！</div>
+    <a href="https://x.com/Pachikokb" target="_blank" class="link-card">
+      <img src="card-x.png" alt="パチンコ情報局 X" class="card-banner">
+    </a>
+  </div>
+
+  <div class="link-item">
+    <div class="link-desc">🎵 TikTokでチェック！</div>
+    <a href="https://www.tiktok.com/@legeslo" target="_blank" class="link-card">
+      <img src="card-tiktok.png" alt="レジェスロ TikTok" class="card-banner">
+    </a>
+  </div>
 </div>
 
 <div class="footer">
