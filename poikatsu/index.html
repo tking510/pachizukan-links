@@ -217,6 +217,17 @@
   }
   .card-banner { width: 100%; border-radius: 12px; display: block; margin-bottom: 12px; }
   .has-banner .card-top { display: none; }
+  /* Accordion */
+  .accordion { margin-bottom: 16px; }
+  .accordion summary { list-style: none; cursor: pointer; }
+  .accordion summary::-webkit-details-marker { display: none; }
+  .accordion-banner { width: 100%; border-radius: 12px; display: block; }
+  .accordion-banner:hover { opacity: 0.9; }
+  .accordion-arrow { text-align: center; color: rgba(240,192,64,0.8); font-size: 14px; margin: 8px 0 4px; }
+  .accordion[open] .accordion-arrow { transform: rotate(180deg); }
+  .accordion-content { padding-top: 12px; }
+  .has-banner .card-top { display: none; }
+  .card-banner { width: 100%; border-radius: 12px; display: block; margin-bottom: 12px; }
   .card-top {
     display: flex;
     align-items: center;
@@ -444,14 +455,12 @@
   <a href="#sec-game" class="cat-pill">🎰 ゲーム</a>
 </div>
 
-<!-- ===== ポイントサイト ===== -->
-<div class="section" id="sec-point">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#f0c040,#e0a020);">💰</div>
-    <span class="section-title">ポイントサイト</span>
-    <span class="section-count">8件</span>
-  </div>
-
+<details class="accordion" id="sec-point">
+  <summary>
+    <img src="banners/cat-pointsite.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="https://pc.moppy.jp/entry/invite.php?invite=5TCfA123" target="_blank" class="card card-featured has-banner">
     <img src="banners/moppy.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -577,16 +586,15 @@
       <div class="code-label">招待リンクから登録 →</div>
     </div>
   </a>
-</div>
-
-<!-- ===== アプリ ===== -->
-<div class="section" id="sec-app">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#4080ff,#2060e0);">📱</div>
-    <span class="section-title">アプリ招待</span>
-    <span class="section-count">6件</span>
   </div>
+</details>
 
+<details class="accordion" id="sec-app">
+  <summary>
+    <img src="banners/cat-app.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="#" target="_blank" class="card card-featured has-banner">
     <img src="banners/tiktok.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -678,16 +686,15 @@
       <div class="code-label">招待リンクから登録 →</div>
     </div>
   </a>
-</div>
-
-<!-- ===== 銀行 ===== -->
-<div class="section" id="sec-bank">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#40c080,#20a060);">🏦</div>
-    <span class="section-title">銀行・金融</span>
-    <span class="section-count">3件</span>
   </div>
+</details>
 
+<details class="accordion" id="sec-bank">
+  <summary>
+    <img src="banners/cat-bank.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="#" target="_blank" class="card card-featured has-banner">
     <img src="banners/minna-bank.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -734,16 +741,15 @@
       <div class="code-label">招待リンクから登録 →</div>
     </div>
   </a>
-</div>
-
-<!-- ===== ショッピング ===== -->
-<div class="section" id="sec-shop">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#ff4080,#e02060);">🛒</div>
-    <span class="section-title">ショッピング</span>
-    <span class="section-count">3件</span>
   </div>
+</details>
 
+<details class="accordion" id="sec-shop">
+  <summary>
+    <img src="banners/cat-shopping.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="#" target="_blank" class="card has-banner">
     <img src="banners/amazon.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -789,16 +795,15 @@
       <button class="code-copy" onclick="event.preventDefault();copyCode(this,'XXXXXX');">コピー</button>
     </div>
   </a>
-</div>
-
-<!-- ===== デリバリー ===== -->
-<div class="section" id="sec-food">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#ff6020,#e04010);">🍔</div>
-    <span class="section-title">デリバリー・タクシー</span>
-    <span class="section-count">3件</span>
   </div>
+</details>
 
+<details class="accordion" id="sec-food">
+  <summary>
+    <img src="banners/cat-delivery.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="#" target="_blank" class="card has-banner">
     <img src="banners/ubereats.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -846,16 +851,15 @@
       <button class="code-copy" onclick="event.preventDefault();copyCode(this,'XXXXXX');">コピー</button>
     </div>
   </a>
-</div>
-
-<!-- ===== 仮想通貨 ===== -->
-<div class="section" id="sec-crypto">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#f7931a,#d97d15);">₿</div>
-    <span class="section-title">仮想通貨</span>
-    <span class="section-count">2件</span>
   </div>
+</details>
 
+<details class="accordion" id="sec-crypto">
+  <summary>
+    <img src="banners/cat-crypto.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="#" target="_blank" class="card card-featured has-banner">
     <img src="banners/bitflyer.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -886,16 +890,15 @@
       <div class="code-label">招待リンクから登録 →</div>
     </div>
   </a>
-</div>
-
-<!-- ===== ゲーム ===== -->
-<div class="section" id="sec-game">
-  <div class="section-header">
-    <div class="section-icon" style="background:linear-gradient(135deg,#a060ff,#8040e0);">🎰</div>
-    <span class="section-title">暇つぶし＆ゲーム</span>
-    <span class="section-count">1件</span>
   </div>
+</details>
 
+<details class="accordion" id="sec-game">
+  <summary>
+    <img src="banners/cat-game.png" alt="" class="accordion-banner" loading="lazy">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
+  <div class="accordion-content">
   <a href="https://pachi.onlinepachi-japan.com/?ref=V9U55H" target="_blank" class="card card-featured has-banner">
     <img src="banners/pachihall.png" alt="" class="card-banner" loading="lazy">
     <div class="card-top">
@@ -911,7 +914,8 @@
       <button class="code-copy" onclick="event.preventDefault();copyCode(this,'V9U55H');">コピー</button>
     </div>
   </a>
-</div>
+  </div>
+</details>
 
 <!-- CTA -->
 <div class="cta">
