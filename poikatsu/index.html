@@ -217,6 +217,15 @@
   }
   .card-banner { width: 100%; border-radius: 12px; display: block; margin-bottom: 12px; }
   .has-banner .card-top { display: none; }
+
+  /* Typewriter */
+  .typewriter { overflow: hidden; white-space: nowrap; border-right: 2px solid rgba(240,192,64,0.8); animation: typing 2s steps(30) 0.5s forwards, blink 0.7s step-end infinite; width: 0; display: inline-block; }
+  .typewriter-line2 { animation-delay: 2.5s; }
+  .typewriter-line3 { animation-delay: 4.5s; }
+  @keyframes typing { from { width: 0; } to { width: 100%; } }
+  @keyframes blink { 50% { border-color: transparent; } }
+  .typewriter-wrap { text-align: center; }
+  .typewriter-wrap p { margin: 4px 0; display: flex; justify-content: center; }
   /* Accordion */
   .accordion { margin-bottom: 16px; }
   .accordion summary { list-style: none; cursor: pointer; }
@@ -422,7 +431,11 @@
 <!-- HERO -->
 <div class="hero">
   <img src="banners/hero.jpg" alt="登録するだけでお金がもらえる招待コード集" style="width:100%;max-width:480px;border-radius:16px;margin-bottom:16px;display:block;margin-left:auto;margin-right:auto;">
-  <p class="hero-sub">登録するだけでお金もらえるって最高じゃん♪<br>マリンのおすすめ全部まとめたよ！<br>さぁ、ポイ活はじめよ〜✨</p>
+  <div class="typewriter-wrap hero-sub">
+    <p><span class="typewriter">登録するだけでお金もらえるって最高じゃん♪</span></p>
+    <p><span class="typewriter typewriter-line2">マリンのおすすめ全部まとめたよ！</span></p>
+    <p><span class="typewriter typewriter-line3">さぁ、ポイ活はじめよ〜✨</span></p>
+  </div>
   <div class="hero-stats">
     <div class="hero-stat">
       <div class="hero-stat-num">25+</div>
