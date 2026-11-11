@@ -154,6 +154,15 @@
     color: #484f58;
     font-size: 12px;
   }
+
+  /* Accordion */
+  .accordion { width: 100%; max-width: 400px; margin-bottom: 16px; }
+  .accordion summary { list-style: none; cursor: pointer; }
+  .accordion summary::-webkit-details-marker { display: none; }
+  .accordion-banner { width: 100%; border-radius: 12px; display: block; }
+  .accordion-banner:hover { opacity: 0.9; }
+  .accordion-arrow { text-align: center; color: rgba(255,215,0,0.8); font-size: 13px; margin: 6px 0 4px; }
+  .accordion[open] .accordion-arrow { transform: rotate(180deg); }
 </style>
 </head>
 <body>
@@ -165,14 +174,11 @@
   <div class="bio">まだ丸腰で打ってんの？それ養分って言うんだよ😂<br>無駄負けしたくないパチンカス諸君よく来たな！<br>ここが噂の…<br>パチ屋に嫌われる側の溜まり場や！<br>ゆっくりしていってな～😊</div>
 </div>
 
-<!-- ジャンル1：情報＆動画 -->
-<div class="genre-section">
-  <div class="genre-header">
-    <span class="genre-line-right"></span>
-    <span class="genre-title">📊 情報＆動画</span>
-    <span class="genre-line"></span>
-  </div>
-
+<details class="accordion">
+  <summary>
+    <img src="cat-info.jpg" alt="" class="accordion-banner">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
   <div class="link-item">
     <div class="link-desc" data-typed="📖 9000機種以上のスペックまとめサイト↓"></div>
     <a href="https://onlinepachi-japan.com/" target="_blank" class="link-card">
@@ -187,15 +193,13 @@
     </a>
   </div>
 </div>
+</details>
 
-<!-- ジャンル2：実践＆ライブ配信 -->
-<div class="genre-section">
-  <div class="genre-header">
-    <span class="genre-line-right"></span>
-    <span class="genre-title">🔴 実践＆ライブ配信</span>
-    <span class="genre-line"></span>
-  </div>
-
+<details class="accordion">
+  <summary>
+    <img src="cat-live.jpg" alt="" class="accordion-banner">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
   <div class="link-item">
     <div class="link-desc" data-typed="📺 ライブ配信はココ！今日は○設定？！↓"></div>
     <a href="https://www.youtube.com/@legeslo2" target="_blank" class="link-card">
@@ -210,15 +214,13 @@
     </a>
   </div>
 </div>
+</details>
 
-<!-- ジャンル3：㊕情報＆パチンカスコミュニティ -->
-<div class="genre-section">
-  <div class="genre-header">
-    <span class="genre-line-right"></span>
-    <span class="genre-title">㊕ 情報＆パチンカスコミュニティ</span>
-    <span class="genre-line"></span>
-  </div>
-
+<details class="accordion">
+  <summary>
+    <img src="cat-community.jpg" alt="" class="accordion-banner">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
   <div class="link-item">
     <div class="link-desc" data-typed="🛡️ 毎日情報ゲットで財布を守れ！↓"></div>
     <a href="https://t.me/pachizukan_free" target="_blank" class="link-card">
@@ -233,15 +235,13 @@
     </a>
   </div>
 </div>
+</details>
 
-<!-- ジャンル4：SNSも見逃すな！ -->
-<div class="genre-section">
-  <div class="genre-header">
-    <span class="genre-line-right"></span>
-    <span class="genre-title">📱 SNSも見逃すな！</span>
-    <span class="genre-line"></span>
-  </div>
-
+<details class="accordion">
+  <summary>
+    <img src="cat-sns.jpg" alt="" class="accordion-banner">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
   <div class="link-item">
     <div class="link-desc" data-typed="🐦 Ｘでチェック！↓"></div>
     <a href="https://x.com/Pachikokb" target="_blank" class="link-card">
@@ -256,14 +256,13 @@
     </a>
   </div>
 </div>
+</details>
 
-<div class="genre-section">
-  <div class="genre-header">
-    <span class="genre-line-right"></span>
-    <span class="genre-title">💰 ポイ活で稼ぐ！</span>
-    <span class="genre-line"></span>
-  </div>
-
+<details class="accordion">
+  <summary>
+    <img src="poikatsu-banner.jpg" alt="" class="accordion-banner">
+    <div class="accordion-arrow">▼ タップで開く</div>
+  </summary>
   <div class="link-item">
     <div class="link-desc" data-typed="💰 登録するだけでお金もらえる！↓"></div>
     <a href="poikatsu/" target="_blank" class="link-card">
@@ -271,6 +270,7 @@
     </a>
   </div>
 </div>
+</details>
 
 <div class="footer">
   <p>© 2026 パチンコ情報局</p>
